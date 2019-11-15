@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Webpack App</title>
+    <script src="../DLL//_dll_react.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
+  </head>
+  <body>
+    <!-- <script src="../DLL//_dll_react.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>-->
+    <script> 
+      var request = new XMLHttpRequest()
+      request.open('get', 'http://172.16.4.61:8090/open/oauth/authorize', true)
+      request.onload = function() {
+        console.log(request.response)
+      }
+      request.send()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+const express = require('express')
+const MiddleWare = require('webpack-dev-middleware')
+const app = express()
+const webpack = require('webpack')
+const compiler = webpack(require('./webpack.config.js'))
+app.use(MiddleWare(compiler))
+app.get('/api/user', (req, res) => res.send('Hello World!'))
+app.listen(3000,() => {
+  console.log('app is linten port 3000')
+})
